@@ -6,14 +6,13 @@ class AddProject extends Component
   render()
   {
 
-    return
-    (
+    return(
         <div>
             <h3>Add Project</h3>
             <form>
                 <div>
-                    <label>Title</label>
-                    <input type="text" ref="" />
+                    <label>Title</label><br />
+                    <input type="text" ref="title" />
                 </div>
             </form>
         </div>
