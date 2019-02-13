@@ -27,7 +27,7 @@ class Todos extends Component {
 
 //generate warnings of not specified type
 Todos.propTypes = {
-  todos: React.PropTypes.array
+  // todos: React.PropTypes.array
 }
 
 

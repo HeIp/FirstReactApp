@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 
-
-class Projectitem extends Component 
-{
-  deleteProject(id)
-  {
+class ProjectItem extends Component {
+  deleteProject(id){
     this.props.onDelete(id);
   }
 
-  render() 
-  {
-      console.log(this.props);
+  render() {
     return (
-      <li className="Projects">
-        <b>{this.props.project.id}</b> - {this.props.project.category} <a href="#" onClick={this.deleteProject.bind(this, this.props.project.id)}>X</a>
+      <li className="Project">
+        <strong>{this.props.project.title}</strong>: {this.props.project.category} <a href="#" onClick={this.deleteProject.bind(this, this.props.project.id)}>X</a>
       </li>
     );
   }
 }
 
-//generate warnings of not specified type
+//generate warnings if mismatched types
 ProjectItem.propTypes = {
-  projects: React.PropTypes.object,
-  onDelete: React.PropTypes.func
+  // project: React.PropTypes.object,
+  // onDelete: React.PropTypes.func
 }
 
-export default Projectitem;
+export default ProjectItem;
